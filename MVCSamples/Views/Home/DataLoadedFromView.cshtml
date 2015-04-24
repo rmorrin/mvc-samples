@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MVCSamples.Models.Person>
+
+@{
+    ViewBag.Title = "Data Loaded From View";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div ng-app="MVCSamples" ng-controller="DataLoadedFromViewCtrl" ng-init="init(@(JsonHelper.SerializeObject(Model)))">
+
+    @Html.Partial("ListPeople")
+
+</div>

@@ -1,0 +1,27 @@
+﻿@* Lists all entries in the 'people' array with angularjs *@
+<div class="well" ng-repeat="person in people">
+    <ul>
+        <li><strong>First Name: </strong>{{person.firstName}}</li>
+        <li><strong>Surname: </strong>{{person.surName}}</li>
+        <li><strong>Age: </strong>{{person.age}}</li>
+        <li>
+            <strong>Occupation: </strong>
+            <ul>
+                <li><strong>Job Title: </strong>{{person.occupation.jobTitle}}</li>
+                <li><strong>Salary: </strong>{{person.occupation.salary}}</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Home Address</strong>
+            <ul>
+                <li><strong>Street: </strong>{{person.homeAddress.street}}</li>
+                <li><strong>District: </strong>{{person.homeAddress.district}}</li>
+                <li><strong>City: </strong>{{person.homeAddress.city}}</li>
+                <li><strong>County: </strong>{{person.homeAddress.county}}</li>
+                <li><strong>Postal Code: </strong>{{person.homeAddress.postalCode}}</li>
+                <li><strong>Country: </strong>{{person.homeAddress.country}}</li>
+            </ul>
+        </li>
+    </ul>
+    <button class="btn btn-success" ng-click="post(person)">POST Person Data</button>
+</div>

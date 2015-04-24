@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Data Loaded From Api";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div ng-app="MVCSamples" ng-controller="DataLoadedFromApiCtrl" ng-init="init()">
+
+    <div class="" ng-hide="people.length > 0">
+        <p class="text-muted">Please Wait...</p>
+        <img src="@Url.Content("/Content/img/loading.gif")" alt="Loading" />
+    </div>
+
+    @Html.Partial("ListPeople")
+
+</div>
